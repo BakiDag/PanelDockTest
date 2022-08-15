@@ -31,21 +31,22 @@ namespace PanelDockTest
                 this.Location = new System.Drawing.Point(this.Location.X, 0);
                 label2.Text = "Docking top";
             }
-            if (this.Location.Y> 740) //ohne erkannte Bildschirmaufloesung muessen location Werte angepasst werden je nach Monitor
-            {                
+            if (this.Location.Y > 740) //ohne erkannte Bildschirmaufloesung muessen location Werte angepasst werden je nach Monitor
+            {
                 this.Location = new System.Drawing.Point(this.Location.X, 818);
                 label2.Text = "Docking bottom";
-            }
-            if (this.Location.X < 30)
-            {  
-                this.Location = new System.Drawing.Point(0,this.Location.Y );
-                label1.Text = "<-- Docking left";
             }
             if (this.Location.X < 40)
             {
                 this.Location = new System.Drawing.Point(0, this.Location.Y);
                 label1.Text = "<-- Docking left";
             }
+            if (this.Location.X > 1580)
+            {
+                this.Location = new System.Drawing.Point(1615, this.Location.Y);
+                label1.Text = "Docking right -->";
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
