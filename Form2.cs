@@ -18,24 +18,12 @@ namespace PanelDockTest
             
         }
 
-        private void Form2_LocationChanged(object sender, EventArgs e)
-        {   
-            if (this.Location.Y < 30)
-            {
-                this.Location = new System.Drawing.Point(this.Location.X, 0);
-            }
-            if (this.Location.Y > 1000)
-            {
-                this.Location = new System.Drawing.Point(this.Location.X, 1025);
-            }
-            if (this.Location.X < 30)
-            {
-                this.Location = new System.Drawing.Point(0, this.Location.Y);
-            }
-        }
+       
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            Form2label1.Text = "X Coords: " + this.Location.X.ToString();
+            Form2label2.Text = "Y Coords: "+this.Location.Y.ToString();
 
         }
 
