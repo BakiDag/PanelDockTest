@@ -23,7 +23,7 @@ namespace PanelDockTest
 
         private void Form1_LocationChanged(object sender, EventArgs e) //bildschrimaufloesung einspeichern und location dafuer anpassen
         {
-
+            //Animation fehlt
             label1.Text = "X Coodinates: "+this.Location.X.ToString();
             label2.Text = "Y Coodinates: " + this.Location.Y.ToString();
             if (this.Location.Y < 40  )
