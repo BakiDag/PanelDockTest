@@ -32,6 +32,8 @@ namespace PanelDockTest
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ScreenXLabel = new System.Windows.Forms.Label();
+            this.ScreenYLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,11 +61,29 @@ namespace PanelDockTest
             this.label3.TabIndex = 1;
             this.label3.Text = "Optimized for 1920*1080 Display Resolution";
             // 
+            // ScreenXLabel
+            // 
+            this.ScreenXLabel.Location = new System.Drawing.Point(272, 104);
+            this.ScreenXLabel.Name = "ScreenXLabel";
+            this.ScreenXLabel.Size = new System.Drawing.Size(161, 23);
+            this.ScreenXLabel.TabIndex = 2;
+            this.ScreenXLabel.Text = "ScreenX";
+            // 
+            // ScreenYLabel
+            // 
+            this.ScreenYLabel.Location = new System.Drawing.Point(272, 136);
+            this.ScreenYLabel.Name = "ScreenYLabel";
+            this.ScreenYLabel.Size = new System.Drawing.Size(161, 23);
+            this.ScreenYLabel.TabIndex = 3;
+            this.ScreenYLabel.Text = "ScreenY";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 230);
+            this.Controls.Add(this.ScreenYLabel);
+            this.Controls.Add(this.ScreenXLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -83,6 +103,8 @@ namespace PanelDockTest
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ScreenXLabel;
+        private System.Windows.Forms.Label ScreenYLabel;
     }
 }
 

@@ -26,16 +26,28 @@ namespace PanelDockTest
         }
 
         private void Form1_LocationChanged(object sender, EventArgs e) //bildschrimaufloesung einspeichern und location dafuer anpassen
-        {            
+        {
+            Screen screen = Screen.PrimaryScreen; //Testimplementation von Screensize
+            Rectangle rect = screen.Bounds;
+            int screenWidth = rect.Width;
+            int screenHeight = rect.Height;
+            int screenTop = rect.Top;
+            int screenLeft = rect.Left;
+
             label1.Text = "X Coodinates: "+this.Location.X.ToString();
             label2.Text = "Y Coodinates: " + this.Location.Y.ToString();
+
+            ScreenXLabel.Text = "Screen Height: " + screenWidth.ToString();
+            ScreenYLabel.Text = "Screen Width: " + screenHeight.ToString();
+
             if (this.Location.Y < 80 && this.Location.Y >0)
             {   
-                Form2Effect.Location = new System.Drawing.Point(this.Location.X-20, 0);
+                Form2Effect.Location = new System.Drawing.Point(this.Location.X-20, this.Location.Y);
                 Form2Effect.Size = new Size(500, 200);
                 Form2Effect.TopMost = false;
-                Form2Effect.Opacity = .100;                
-                Form2Effect.Visible= true;
+                Form2Effect.Opacity = .100;
+                Form2Effect.Show() ;
+                //Form2Effect.Visible= true;
                 
 
                 this.Location = new System.Drawing.Point(this.Location.X, this.Location.Y-1);
